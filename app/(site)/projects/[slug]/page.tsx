@@ -4,11 +4,12 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export default async function ProjectPage({ params }: Props) {
-  const project = await getProject(params.slug);
+  const { slug } = await params;
+  const project = await getProject(slug);
 
   if (!project) {
     notFound();

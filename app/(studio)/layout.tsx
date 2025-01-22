@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import '../../styles/globals.css'; // Import Tailwind CSS
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'My Blog',
