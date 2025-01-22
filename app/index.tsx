@@ -9,7 +9,7 @@ interface Props {
 
 export default function Home({ projects }: Props) {
   return (
-      <div className="max-w-7xl mx-auto py-12 flex gap-4 flex-col sm:px-4">
+      <>
       
       <h1 className="text-4xl font-extrabold">Hey, I&apos;m <span className="bg-gradient-to-r from-orange-300 to-purple-400 bg-clip-text text-transparent">Rafa</span> 👋</h1>
       <p className="mt-3 text-xl text-gray-600 dark:text-gray-300">Hey bruh! I&apos;m a full stack parent and full time developer with some solopreneur-indie hacker masochistic tendencies.</p>
@@ -33,7 +33,7 @@ export default function Home({ projects }: Props) {
            </Link>
         ))}
         </div>
-      </div>
+      </>
   );
 }
 

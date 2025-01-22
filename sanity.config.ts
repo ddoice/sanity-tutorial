@@ -1,19 +1,12 @@
-import { defineConfig } from "sanity";
+import { structureTool } from "sanity/structure";
+import { config as baseConfig } from "./sanity/config";
 import schemas from "./sanity/schemas";
-import {structureTool} from 'sanity/structure'
-
-//import { deskTool } from "sanity/desk";
-
-const config = defineConfig({
-    projectId: "xamkw67s",
-    dataset: "production",
-    title: "Personal blog",
-    useCdn: true,
-    basePath: "/admin",
-    schema: { types: schemas },
-    apiVersion: '2023-03-04',
-    //plugins : [structureTool()],
-    //apiVersion: "",
-});
-
+const config =  {
+  ...baseConfig,
+  title: "Personal blog",
+  basePath: "/admin",
+  type: "document",
+  schema: { types: schemas },
+  plugins : [structureTool()],
+};
 export default config;
